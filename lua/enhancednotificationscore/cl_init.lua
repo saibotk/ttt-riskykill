@@ -108,7 +108,7 @@ end
 -- Returns:     String
 -------------------------------------------------------------------------------
 function ENHANCED_NOTIFICATIONS:GetVersion()
-    return "1.2.0"
+    return "1.2.2"
 end
 
 -------------------------------------------------------------------------------
@@ -157,8 +157,8 @@ function ENHANCED_NOTIFICATIONS:CreateNotificationElement( title, color, subtext
         posXTitle, posYTitle = 16, 5
         sizeXTitle, sizeYTitle = 284, 32
 
-        posXSub, posYSub = 16, 37
-        sizeXSub, sizeYSub = 284, 32
+        posXSub, posYSub = 16, 35 -- 37 before
+        sizeXSub, sizeYSub = 284, 34 -- 32 before
     end
 
 		-- TODO Add selection for different screen Sizes like < 1080p = Font size 11
