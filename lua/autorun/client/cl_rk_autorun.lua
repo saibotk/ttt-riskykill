@@ -21,8 +21,14 @@ include( "enhancednotificationscore/shared.lua" )
 
 hook.Add("PostGamemodeLoaded", "TTT_Risky_Kill_Init", function()
 
-  -- Receive Callback
-  net.Receive( "TTT_RK_KILL", function()
-  	ENHANCED_NOTIFICATIONS:NewNotification({title="It seems like a player has died.", color=Color(30, 30, 30, 250)})
-  end )
+	-- Receive Callback
+	net.Receive( "TTT_RK_KILL", function()
+		if TTT2 and MSTACK.AddColoredImagedMessage then
+			local message = "It seems like a player has died."
+			local mat = Material("vgui/ttt/tbn_ic_default")
+			MSTACK:AddImagedMessage(message, mat)
+		else
+			ENHANCED_NOTIFICATIONS:NewNotification({title = "It seems like a player has died.", color = Color(30, 30, 30, 250)})
+		end
+	end )
 end)

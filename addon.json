@@ -1,0 +1,16 @@
+{
+    "ignore": [
+        ".git/*",
+        ".gitignore",
+        ".gitattributes",
+        "README.md",
+        "LICENSE",
+        "out.gma"
+    ],
+    "tags": [
+        "fun"
+    ],
+    "title": "TTT-Risky-Kill",
+    "type": "tool",
+    "workshopid": 1396140994
+}
